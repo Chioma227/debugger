@@ -1,8 +1,103 @@
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-/* .navbar{
-    ;
-} */
+body{
+    background-color: rgb(43, 43, 43);
+}
+.navbar ul{
+    position: relative;
+}
+.navbar ul li{
+    display: inline-block;
+    margin-left: 30px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(206, 206, 206);
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+.section1{
+    color: white;
+    position: absolute;
+    top: 36%;
+    right: 0;
+    width: 100%;
+    text-align: left;
+}
+.name{
+    font-size: 50px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 99.9%;
+    height:70px;
+    position: fixed;
+    border: none;
+    z-index: 10000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:sans-serif;
+    padding: 50px 0px;
+    transition: 2s;
+}
+.navbar.sticky ul li a{
+    color: black;
+}
+.navbar.sticky{
+    background-color: rgb(206, 206, 206);
+    color: black;
+    padding: 30px;
+    box-shadow: 2px 2px 30px 3px rgba(255, 255, 255, 0.5);
+}
+.intro{
+    width: 60%;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.hero{
+    background-image: url(/src/Images/hero-img.jpg);
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* filter: brightness(60%); */
+    background-attachment: fixed;
+}
+.section2{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 100px;
+    /* justify-content: space-between; */
+}
+.about{
+    width: 60%;
+    color: rgb(206, 206, 206);
+    background-color: rgba(34, 34, 34, 0.705);
+    border: 5px solid rgba(206, 206, 206, 0.226);
+    font-size: 25px;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about::first-letter{
+    font-size: 50px;
+    background-image: linear-gradient(to left, rgb(163, 0, 0),rgb(0, 0, 0));
+    background-clip: text;
+    font-weight: bolder;
+    -webkit-text-fill-color: transparent;
+    background-size: 100%;
+}
+.about-img img{
+    height: 500px;
+}

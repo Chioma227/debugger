@@ -1,28 +1,35 @@
 import React from 'react'
-import Logo from '../Images/Logo-4.png'
+// import styled from 'styled-components'
+import Hero from './Hero'
+
 
 const Header = () => {
+  window.addEventListener('scroll', () => {
+    let header = document.querySelector('.navbar');
+    header.classList.toggle('sticky', window.scrollY > 100)
+  })
   return (
     <div>
-      <nav className='container d-flex align-items-center justify-content-between shadow navbar'>
-        <div className='col-lg-3'>
-            <img src={Logo} alt="logo" className='image-fluid w-25'/>
-        </div>
-        <ul>
+
+      <div>
+        <nav className='navbar'>
+          <ul>
             <li>
-                <a href="http://home">home</a>
+              <a href="http://home" className='home'>home</a>
             </li>
             <li>
-                <a href="http://about">about</a>
+              <a href="http://about">about</a>
             </li>
             <li>
-                <a href="http://contact">contact</a>
+              <a href="http://contact">contact</a>
             </li>
             <li>
-                <a href="http://services">our services</a>
+              <a href="http://services">our services</a>
             </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+      </div>
+     
     </div>
   )
 }
