@@ -6,7 +6,7 @@ const Hero = () => {
             <div className='hero'>
                 <div className='section1'>
                     <motion.h3 initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, x: 100 }}
+                        animate={{ opacity: 1, x: -70 }}
                         exit={{ opacity: 0 }}
                         transition={{ type: "tween", duration: 2, delay: 0.6 }}
                         key="logoText" className='name'>
@@ -15,7 +15,7 @@ const Hero = () => {
                     <motion.h5 initial={{ opacity: 0 }}
                         animate={{ opacity: 1, y: 20 }}
                         exit={{ opacity: 0 }}
-                        transition={{ type: "tween", duration: 2, delay: 2.5 }}
+                        transition={{ type: "tween", duration: 2, delay: 1.7 }}
                         key="logoText" 
                         className='intro'
                     >
