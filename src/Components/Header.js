@@ -13,6 +13,7 @@ const Header = () => {
 
       <div>
         <nav className='navbar'>
+         
           <ul>
             <li>
               <a href="http://home" className='home'>home</a>
@@ -27,6 +28,10 @@ const Header = () => {
               <a href="http://services">our services</a>
             </li>
           </ul>
+          <input type="checkbox" id="check" />
+          <label htmlFor="check"  className='menu'>
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </label>
         </nav>
       </div>
      

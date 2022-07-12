@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <Hero />
-      <Intro/>
+      {/* <Intro/> */}
       <Works/>
     </div>
   );
