@@ -18,7 +18,8 @@ const Travel = (props) => {
         }
     }, [inView])
 
-
+    
+     
   return (
     <div>
        <motion.div
@@ -31,6 +32,9 @@ const Travel = (props) => {
                         <a target='_blank' rel="noreferrer" href="http://..." className='btn'>VIEW</a>
                     </div>
                 </motion.div>
+
+
+                
     </div>
   )
 }

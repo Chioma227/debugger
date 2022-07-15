@@ -1,0 +1,52 @@
+.progress {
+    position: relative;
+    height: 29px;
+    width: 30%;
+    padding: 2px 3px;
+    border: 2px solid #C197FF;
+    border-radius: 15px;
+    background-color: #000000;
+    margin-bottom: 10px;
+}
+
+.progress .color1 {
+    position: absolute;
+    background-color: #845EC2;
+    width: 98%;
+    height: 21px;
+    color: white;
+    border-radius: 15px;
+
+}
+.progress .color2 {
+    position: absolute;
+    background-color: #845EC2;
+    width: 80%;
+    height: 21px;
+    color: white;
+    border-radius: 15px;
+
+}
+.progress .color3 {
+    position: absolute;
+    background-color: #845EC2;
+    width: 80%;
+    color: white;
+    height: 21px;
+    border-radius: 15px;
+
+}
+.progress .color4 {
+    position: absolute;
+    background-color: #845EC2;
+    width: 85%;
+    color: white;
+    height: 21px;
+    border-radius: 15px;
+
+}
+
+.percent {
+    margin: auto;
+    width: fit-content;
+}

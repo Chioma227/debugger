@@ -22,7 +22,6 @@ const Dashboard = (props) => {
   return (
     <div>
        <motion.div ref={ref} animate={animation}
-                    // transition={{ type: "tween", duration: 3 }}  
                     className='container1'>
                     <img src={props.img} alt="dashboard" />
                     <div className='image__overlay'>

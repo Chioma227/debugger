@@ -3,14 +3,12 @@ import fylo from '../Images/Screenshot (213).png'
 import victoriya from '../Images/Screenshot (211).png'
 import travel from '../Images/Screenshot (212).png'
 import dashboard from '../Images/Screenshot (210).png'
-import { motion, useAnimation } from 'framer-motion'
+import { motion} from 'framer-motion'
 import styled from 'styled-components'
 import Fylo from './Workss/Fylo'
 import Food from './Workss/Food'
 import Dashboard from './Workss/Dashboard'
 import Travel from './Workss/Travel'
-import { useInView } from 'react-intersection-observer'
-import { useEffect } from 'react'
 
 
 const HStyle = styled.div`
