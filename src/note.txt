@@ -1,0 +1,23 @@
+doc -- https://themes.muffingroup.com/be/medic/wp-content/uploads/revslider/medic/slide-doctor-1.png
+
+logo -- https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/medic.png
+
+medication -- https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_icon_1.png
+
+heart defect -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_icon_2.png
+
+dental caries -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_icon_3.png
+
+first aid -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_icon_4.png
+
+heart rate -- https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_heart_rate.png
+
+image1 -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/doctor_welcome.jpg
+
+jennifer -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/our_team_1.jpg
+
+doris -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/our_team_5.jpg
+
+petridish -- 	https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/how_it_works_lab.png
+
+about-solutions -- https://themes.muffingroup.com/be/medic/wp-content/uploads/2014/11/how_it_works_cup.png

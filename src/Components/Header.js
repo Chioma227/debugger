@@ -1,9 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 // import { BrowserRouter } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
-// import styled from 'styled-components'
-// import Hero from './Hero'
-
 
 const Header = () => {
   window.addEventListener('scroll', () => {

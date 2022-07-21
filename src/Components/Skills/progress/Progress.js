@@ -1,6 +1,10 @@
-import React from "react"
+import React, { useEffect} from "react"
 import "./progress.css"
 import styled from "styled-components"
+import Education from "../Education"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { useAnimation } from "framer-motion"
 
 const PStyle = styled.div` 
 margin-top: 8%
@@ -21,10 +25,36 @@ background-image: linear-gradient(to bottom, #BE36B3, #845EC2);
 `
 
 const Progress = () => {
-  return (
 
-    <div>
-      <PStyle>
+  const { ref, inView } = useInView()
+  const animation = useAnimation()
+  
+  useEffect(() => {
+    if(inView)
+    {
+      animation.start({
+        opacity: 1,
+        y:0,
+        transition: { duration: 1 }
+      })
+    }
+    if(!inView){
+      animation.start({
+        opacity:0,
+        y:30
+      })
+    }
+  }, [inView])
+
+  return (
+    <PStyle  className='skills'>
+
+      <motion.div
+      initial={{ opacity: 0 }}
+      ref={ref}
+      animate={animation}
+      >
+        
         <section>
           <SStyle>SKILLS</SStyle>
           <LineStyle></LineStyle>
@@ -32,8 +62,8 @@ const Progress = () => {
             Communication
           </p>
           <div className='my_progress'>
-            <div class="progress">
-              <div class="color1">
+            <div className="progress">
+              <div className="color1">
                 <p className='percent'>99.9%</p>
               </div>
             </div>
@@ -42,10 +72,10 @@ const Progress = () => {
         <section>
           <p>
             Problem Solving
-          </p>
+          </p>  
           <div className='my_progress'>
-            <div class="progress">
-              <div class="color2">
+            <div className="progress">
+              <div className="color2">
                 <p className='percent'>80%</p>
               </div>
             </div>
@@ -56,8 +86,8 @@ const Progress = () => {
             Team Work
           </p>
           <div className='my_progress'>
-            <div class="progress">
-              <div class="color3">
+            <div className="progress">
+              <div className="color3">
                 <p className='percent'>80%</p>
               </div>
             </div>
@@ -68,20 +98,16 @@ const Progress = () => {
             Leadership
           </p>
           <div className='my_progress'>
-            <div class="progress">
-              <div class="color4">
+            <div className="progress">
+              <div className="color4">
                 <p className='percent'>85%</p>
               </div>
             </div>
           </div>
         </section>
-      </PStyle>
-      <section className="practice">
-        <div>
-         
-        </div>
-      </section>
-    </div>
+      </motion.div>
+      <Education/>
+    </PStyle>
   )
 }
 

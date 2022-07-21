@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import Progress from './Progress/Progress'
+import Progress from './Skills/progress/Progress'
 import styled from 'styled-components'
 import svg from "../Images/about.svg"
 
@@ -25,33 +25,40 @@ background-image: linear-gradient(to bottom, #BE36B3, #845EC2);
 
 const About = () => {
     const { ref, inView } = useInView({
-        threshold: 0.5
+        threshold: 0.2
     })
+
     const animation = useAnimation()
-    useEffect(() => {
+
+    useEffect(() => { 
+
         if (inView) {
             animation.start({
-                initial: {opacity: 0, x: 800},
                 opacity:1,
-                x: [400, 0],
-                transition: { type: "tween", duration: 3 }
+                y: 0,
+                transition: { duration:2 }
+            });
+
+        }
+        if (!inView) {
+            animation.start({
+                opacity: 0,
+               y: 70
             })
         }
+         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView])
 
     return (
-        <div id='about'>
+        <div ref={ref} id='about'>
 
-            <AboutStyle>ABOUT ME</AboutStyle>
+            <AboutStyle>ABOUT</AboutStyle>
             <LineStyle className='line_through'></LineStyle>
 
-            <div className='section3'>
-                <div className='illustrator_1'>
-                    <img src={svg} alt="illustrator" />
-                </div>
-                <motion.div
-                    ref={ref}
-                    animate={animation}
+            <motion.div  
+             animate={animation}
+            className='section3'>
+                <div
                     className='section2'>
                     <div>
                         <h3 className='about'>
@@ -61,9 +68,12 @@ const About = () => {
                             I'm highly open to hiring and looking forward to creating satisfactory websites for global and local clients.
                         </h3>
                     </div>
-                </motion.div>
-            </div>
-                <Progress />
+                </div>
+                <div className='illustrator_1'>
+                    <img src={svg} alt="illustrator" />
+                </div>
+            </motion.div>
+            <Progress />
         </div>
     )
 }

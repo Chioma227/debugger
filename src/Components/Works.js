@@ -1,15 +1,10 @@
 import React from 'react'
-import fylo from '../Images/Screenshot (213).png'
-import victoriya from '../Images/Screenshot (211).png'
-import travel from '../Images/Screenshot (212).png'
-import dashboard from '../Images/Screenshot (210).png'
-import { motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
-import Fylo from './Workss/Fylo'
-import Food from './Workss/Food'
-import Dashboard from './Workss/Dashboard'
-import Travel from './Workss/Travel'
-
+import Data from './Data'
+import { useInView } from 'react-intersection-observer'
+import { useAnimation } from 'framer-motion'
+import { useEffect } from 'react'
 
 const HStyle = styled.div`
 text-align:center;
@@ -17,27 +12,53 @@ color:white;
 margin-top: 80px;
 `
 
+const LineStyle = styled.div`
+width:100px;
+margin: auto;
+height: 9px;
+margin-bottom: 30px;
+border-top-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background-image: linear-gradient(to bottom, #BE36B3, #845EC2);
+`
+
 const Works = () => {
+    const { ref, inView } = useInView()
+    const animation2 = useAnimation()
+    useEffect(() => {
+        if (inView) {
+            animation2.start({
+                y: 0,
+                transition: { type: "spring", duration: 3 }
+            })
+        }
+        if (!inView) {
+            animation2.start({
+                y: 100
+            })
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[inView])
 
     return (
-        <div>
+        <div id="works">
             <HStyle>
                 <h1>RECENT WORKS</h1>
+                <LineStyle></LineStyle>
             </HStyle>
-
             <div className='works__wrapper'>
-                <Fylo img={fylo} />
-                <Food img={victoriya} />
-                <Dashboard img={dashboard} />
-                <Travel img={travel} />
-                <motion.div className='container5'>
-                    <img src={dashboard} alt="dashboard" />
-                    <div className='image__overlay'>
-                        <h2>ADMIN DASHBOARD</h2>
-                        <a target='_blank' rel="noreferrer" href="http://..." className='btn'>VIEW</a>
-                    </div>
-                </motion.div>
-
+                {Data.map((items) => (
+                    <motion.div
+                        ref={ref}
+                        animate={animation2}
+                        className='container2'>
+                        <img src={items.image} alt={items.alternative_text} />
+                        <div className='image__overlay'>
+                            <h2>{items.name}</h2>
+                            <a target='_blank' rel="noreferrer" href="http://..." className='btn'>{items.button}</a>
+                        </div>
+                    </motion.div>
+                ))}
             </div>
         </div>
     )
