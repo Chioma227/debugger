@@ -8,6 +8,7 @@ import { useAnimation } from "framer-motion"
 
 const PStyle = styled.div` 
 margin-top: 8%
+
 `
 
 const SStyle = styled.div`

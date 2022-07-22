@@ -58,6 +58,9 @@ const About = () => {
             <motion.div  
              animate={animation}
             className='section3'>
+                 <div className='illustrator_1'>
+                    <img src={svg} alt="illustrator" />
+                </div>
                 <div
                     className='section2'>
                     <div>
@@ -69,9 +72,7 @@ const About = () => {
                         </h3>
                     </div>
                 </div>
-                <div className='illustrator_1'>
-                    <img src={svg} alt="illustrator" />
-                </div>
+               
             </motion.div>
             <Progress />
         </div>

@@ -8,12 +8,6 @@ import { useInView } from 'react-intersection-observer'
 import { useAnimation } from 'framer-motion'
 import { BsLinkedin } from 'react-icons/bs'
 
-
-
-const IconStyle = {
-    fontSize: "25px",
-    marginRight: "25px"
-}
 const Hero = () => {
     const {ref, inView} = useInView()
     const myAnimation = useAnimation()
@@ -49,19 +43,19 @@ const Hero = () => {
 
                     <div className='icons'>
                        <a target="_blank" rel="noreferrer" href="https://twitter.com/Assuran85757998">
-                       <BsTwitter style={IconStyle} />
+                       <BsTwitter className="iconStyle" />
                        </a>
                        <a target="_blank" rel="noreferrer" href="https://github.com/Chioma227/debugger">
-                       <BsGithub style={IconStyle} />
+                       <BsGithub className="iconStyle" />
                        </a>
                         <a target="_blank" rel="noreferrer" href="https://web.facebook.com/profile.php?id=100068477616692">
-                        <BsFacebook style={IconStyle} />
+                        <BsFacebook className="iconStyle" />
                         </a>
                        <a target="_blank" rel="noreferrer" href="https://...">
-                       <BsInstagram style={IconStyle} />
+                       <BsInstagram className="iconStyle" />
                        </a>
                        <a href="https://...">
-                        <BsLinkedin style={IconStyle}/>
+                        <BsLinkedin className="iconStyle"/>
                        </a>
                     </div>
                 </motion.div>

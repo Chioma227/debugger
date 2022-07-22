@@ -51,6 +51,7 @@ const Education = () => {
     <div>
       <motion.section ref={ref}
         animate={animation}
+        className="education"
       >
         <div>
           <EStyle>EDUCATION</EStyle>

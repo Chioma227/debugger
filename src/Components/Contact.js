@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { BsEnvelopeFill } from 'react-icons/bs'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { BsTwitter } from 'react-icons/bs'
@@ -19,10 +19,14 @@ margin: auto;
 height: 9px;
 margin-bottom: 30px;
 border-top-left-radius: 5px;
-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px; 
 background-image: linear-gradient(to bottom, #BE36B3, #845EC2);
 `
-
+const IconStyle = {
+    fontSize: "20px",
+    marginRight: "16px",
+    
+}
 const Contact = () => {
     const { ref, inView } = useInView()
     const myAnimation = useAnimation()
@@ -70,24 +74,25 @@ const Contact = () => {
                     <article>
                         <div className='label'>
                             <BsFillChatFill /> <span>Socials</span>
-                        </div>
+                        </div><br />
                         <a target="_blank" rel="noreferrer" href="https://twitter.com/Assuran85757998">
-                            <BsTwitter />
+                            <BsTwitter style={IconStyle}/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://github.com/Chioma227/debugger">
-                            <BsGithub />
+                            <BsGithub style={IconStyle}/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://web.facebook.com/profile.php?id=100068477616692">
-                            <BsFacebook />
+                            <BsFacebook style={IconStyle}/>
                         </a>
                         <a target="_blank" rel="noreferrer" href="https://...">
-                            <BsInstagram />
+                            <BsInstagram style={IconStyle}/>
                         </a>
                         <a href="https://...">
-                            <BsLinkedin />
+                            <BsLinkedin style={IconStyle}/>
                         </a>
                     </article>
                 </div>
+                
                 <div>
                     <form action="#" method="POST" id='form'>
                         <div className='inputs'>
