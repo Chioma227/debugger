@@ -64,12 +64,20 @@ body {
     text-transform: uppercase;
     position: relative;
     transition: 0.4s;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .navbar ul li a:hover {
     border-bottom-width: 3px;
     border-bottom: 4px solid var(--purple);
     transform: translateX(40px);
+}
+
+.navbar ul.active{
+    right: 0;
 }
 
 .icons {
@@ -275,6 +283,8 @@ body {
 }
 
 #close {
+    font-size: 25px;
+    color: black;
     display: none;
 }
 
@@ -348,11 +358,6 @@ gap: 30px;
     text-decoration: none;
     color: var(--light);
 }
-
-/* .iconStyle{
-    font-size: "25px";
-    margin-right: "25px"
-} */
 
 #form {
     display: flex;
@@ -448,7 +453,6 @@ footer {
         min-width: 300px;
         transition: 0.3s;
         z-index: 999;
-
     }
 
     #close {
@@ -461,6 +465,10 @@ footer {
 
     .menu.sticky {
         background-color: var(--dark);
+    }
+
+    .navbar.sticky ul li a {
+        color: var(--dark);
     }
 
     .navbar ul li a {
@@ -476,14 +484,6 @@ footer {
     .container5 {
         margin-bottom: 30px;
     }
-
-    /* .works__wrapper {
-        grid-template-columns: repeat(2, 1fr);
-        width: fit-content;
-        gap: 30px;
-        margin: auto;
-        margin-top: 10%;
-    } */
 
     .menu {
         display: block;
@@ -633,7 +633,8 @@ footer {
         width: 260px;
     }
     .name{
-        font-size: 25px;
+        font-size: 30px;
+        /* width: 250px; */
         margin-bottom: 20px;
     }
     .explore{
@@ -647,6 +648,20 @@ footer {
         flex-direction: row;
         gap: 10px;
         margin-top: 15px;
+    }
+    .navbar ul {
+        position: fixed;
+        background-color: var(--light);
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        transition: 0.3s;
+        z-index: 999;
     }
 }
 @media only screen and (max-width:325px) {
@@ -666,7 +681,4 @@ footer {
         gap: 10px;
         margin-top: 15px;
     }
-}
-#check:checked~.navbar ul {
-    right: 0;
 }

@@ -7,18 +7,14 @@ const Header = () => {
     let header = document.querySelector('.navbar');
     header.classList.toggle('sticky', window.scrollY > 100)
   })
-
-  // let close = document.getElementById('close')
-  // let navi = document.querySelector("ul")
-  // let menu = document.querySelector('menu')
-
-  // menu.addEventListener("click", () => {
-  //     navi.classList.add("active")
-  //   })
-
-  //   close.addEventListener("click", () => {
-  //     navi.classList.remove("active")
-  //   })
+  let navi = document.querySelector("ul")
+  
+  const ShowLinks =() => {
+      navi.classList.add("active")
+  }
+  const HideLinks =() => {
+      navi.classList.remove("active")
+  }
 
   return (
 
@@ -28,28 +24,27 @@ const Header = () => {
         <nav className='navbar'>
 
           <ul>
-            <i class="fa fa-times" aria-hidden="true" id='close'></i>
+            <i class="fa fa-times" aria-hidden="true" id='close' onClick={HideLinks}></i>
             <li>
-              <Link to="#home" smooth href="http://home" >home</Link>
+              <Link to="#home" smooth >home</Link>
             </li>
             <li>
-              <Link to="#about" smooth href="http://about" >about</Link>
+              <Link to="#about" smooth>about</Link>
             </li>
             <li>
-              <Link to="#team" smooth href="http://contact" >team</Link>
+              <Link to="#team" smooth >team</Link>
             </li>
             <li>
-              <Link to="#works" smooth href="http://services" >works</Link>
+              <Link to="#works" smooth >works</Link>
             </li>
             <li>
-              <Link to="#contact" smooth href="http://services" >contact</Link>
+              <Link to="#contact" smooth >contact</Link>
             </li>
           </ul>
 
           <input type="checkbox" id="check" />
-
           <label htmlFor="check" className='menu'>
-            <i class="fa fa-bars" aria-hidden="true"></i>
+            <i class="fa fa-bars" aria-hidden="true" onClick={ShowLinks}></i>
           </label>
         </nav>
       </div>
